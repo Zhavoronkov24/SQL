@@ -1,6 +1,6 @@
-JOIN    (MySQL)
+(MySQL)
 
-
+JOIN
 
 SELECT * FROM product 
 inner join category on product.category_id = category.id;
@@ -24,3 +24,18 @@ SELECT product.id, brand.name, product_type.name, category.name, product.price F
 INNER JOIN category on product.category_id = category.id 
 INNER JOIN brand on brand.id = product.brand_id
 INNER JOIN product_type on product_type.id = product.product_type_id; 
+
+LEFT JOIN
+
+SELECT * FROM category
+LEFT JOIN product on product.category_id = category.id;
+    
+SELECT * FROM category
+LEFT JOIN product on product.category_id = category.id
+WHERE product.id is null;
+
+RIGHT JOIN
+    
+SELECT * FROM category
+RIGHT JOIN product on product.category_id = category.id
+WHERE product.id is null;    
