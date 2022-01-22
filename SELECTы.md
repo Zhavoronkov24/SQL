@@ -84,5 +84,13 @@ SELECT * FROM category LIMIT 2;
 SELECT * FROM category 
 WHERE discount <> 0 LIMIT 2;
 
+Агрегирующие фуннкции
+
+SELECT * FROM product;
+
+SELECT count(*) FROM product 
+WHERE product.price < 10000;
+
+SELECT sum(price) as total_price, min(price) as min_price, max(price) as max_price FROM product;
 
 
