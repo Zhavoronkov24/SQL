@@ -1,0 +1,26 @@
+JOIN    (MySQL)
+
+
+
+SELECT * FROM product 
+inner join category on product.category_id = category.id;
+    
+SELECT product.id, price, name FROM product  
+INNER JOIN category on product.category_id = category.id; 
+    
+     
+
+SELECT * FROM product  
+INNER JOIN category on product.category_id = category.id
+WHERE discount <= 5;
+   
+       
+SELECT * FROM product  
+INNER JOIN category on product.category_id = category.id 
+INNER JOIN brand on brand.id = product.brand_id
+INNER JOIN product_type on product_type.id = product.product_type_id;
+    
+SELECT product.id, brand.name, product_type.name, category.name, product.price FROM product  
+INNER JOIN category on product.category_id = category.id 
+INNER JOIN brand on brand.id = product.brand_id
+INNER JOIN product_type on product_type.id = product.product_type_id; 
