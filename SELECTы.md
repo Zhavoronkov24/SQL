@@ -84,7 +84,7 @@ SELECT * FROM category LIMIT 2;
 SELECT * FROM category 
 WHERE discount <> 0 LIMIT 2;
 
-Агрегирующие фуннкции
+Агрегирующие функции
 
 SELECT * FROM product;
 
